@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import { Route, Switch } from 'react-router-dom';
 import Container from '../Container';
 import Main from '../Main';
@@ -7,7 +8,7 @@ import Footer from '../Footer';
 import routes from '../../routes';
 import '../../styles';
 
-export default function App() {
+function App() {
   return (
     <Container>
       <Header />
@@ -20,3 +21,5 @@ export default function App() {
     </Container>
   );
 }
+
+export default hot(module)(App);
